@@ -1,0 +1,89 @@
+
+.mainproject{
+    text-align: center;
+    position: absolute;
+    left:55%;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 40%;
+    height: 50vh;
+    max-height: 90%;
+    
+    
+  
+
+    .heading{
+        color:#ffd700;
+        padding-bottom: 25px;
+        font-size: 28px;
+
+        h2 {
+          margin: 0;
+        }
+
+
+        .underline{
+          margin-bottom: 40px;
+        }
+    }
+
+    .projectscontainer{
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        max-height: 50vh;
+        
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+
+        .projectbutton{
+            margin-bottom: 30px;
+            --b: 3px;  
+            --s: .45em; 
+            --color: #373B44;
+            
+            padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+            color: var(--color);
+            --_p: var(--s);
+            background:
+              conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+              var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+            transition: .3s linear, color 0s, background-color 0s;
+            outline: var(--b) solid #0000;
+            outline-offset: .6em;
+            font-size: 16px;
+          
+            border: 0;
+          
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+            .projectname{
+                font-family: 'coolvetica';
+                letter-spacing: 1px;
+                color: white;
+                font-size: 16px;
+
+
+                &:hover{
+                    color: yellow;
+                }
+            }
+            &:hover{
+                --_p: 0px;
+                outline-color: white;
+                outline-offset: .05em;
+            }
+        }
+        
+    }
+}
+
+.Projectscompo{
+  &:hover{
+    color: white;
+  }
+}
